@@ -1,39 +1,14 @@
 package carparkingsystem;
 
-public class Vehicle {
-    String liscenceNumber;
-    String vehicleModel;
+abstract class Vehicle {
+    private String licensePlate;
 
-    public Vehicle(String liscenceNumber, String vehicleModel) {
-        this.liscenceNumber = liscenceNumber;
-        this.vehicleModel = vehicleModel;
+    public Vehicle(String licensePlate){
+        this.licensePlate = licensePlate;
     }
 
-    public Vehicle(){
-
+    public String getLicensePlate(){
+        return this.licensePlate;
     }
 
-    public String getLiscenceNumber() {
-        return liscenceNumber;
-    }
-
-    public void setLiscenceNumber(String liscenceNumber) {
-        this.liscenceNumber = liscenceNumber;
-    }
-
-    public String getVehicleModel() {
-        return vehicleModel;
-    }
-
-    public void setVehicleModel(String vehicleModel) {
-        this.vehicleModel = vehicleModel;
-    }
-
-    @Override
-    public String toString() {
-        return "Vehicle{" +
-                "liscenceNumber='" + liscenceNumber + '\'' +
-                ", vehicleModel='" + vehicleModel + '\'' +
-                '}';
-    }
 }
