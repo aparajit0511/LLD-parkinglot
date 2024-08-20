@@ -1,4 +1,7 @@
+import carparkingsystem.Car;
 import carparkingsystem.Motorcycle;
+import carparkingsystem.ParkingLot;
+import carparkingsystem.Slot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,11 +19,24 @@ public class Main {
         System.out.println(slot.getSlotNumber());
         System.out.println(slot.isAvailable());
 //        System.out.println(slot.park(car));
+        ParkingLot parkingLot = new ParkingLot(10);
+        System.out.println(parkingLot.getAvailableSlots().size());
+//        System.out.println(parkingLot.getTotalavailableslots());
+        parkingLot.parkVehicle(car);
+        System.out.println(parkingLot.getAvailableSlots().size());
+//        System.out.println(parkingLot.getTotalavailableslots());
+        Car car1 = new Car("AP12LP1234");
+        parkingLot.parkVehicle(car1);
+        Motorcycle motorcycle1 = new Motorcycle("UP15SP1090");
+        parkingLot.parkVehicle(motorcycle);
+        System.out.println(parkingLot.getAvailableSlots().size());
+//        System.out.println(parkingLot.getTotalavailableslots());
+
 
     } // main
 }
 
-
+/*
 
 class ParkingLot {
     private List<Slot> slots;
@@ -118,6 +134,8 @@ class Bike extends Vehicle {
         super(licensePlate);
     }
 }
+*/
+
 /*
 public class Main {
     public static void main(String[] args) {

@@ -22,4 +22,8 @@ public class Slot {
     public void vacate(){
         this.isOccupied = false;
     }
+
+    public int getSlotNumber(){
+        return slotNumber;
+    }
 }
